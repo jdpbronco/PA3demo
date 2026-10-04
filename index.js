@@ -51,7 +51,7 @@ app.post("/api/sensor", async (req, res) => {
     }
 
     try {
-        await query("INSERT INTO sensor_data (sensor_reading, temperature) VALUES (?, ?)", 
+        await query("INSERT INTO arduino_data (sensor_reading, temperature) VALUES (?, ?)", 
             [sensorReading, temperature]);
          
         res.json({
